@@ -1,0 +1,64 @@
+<html>
+<head> <script>
+
+function fd()
+ {
+ 	if(document.fn.email.value=="")
+	 {
+		alert("Please Enter Your Email ID");
+		document.fn.email.focus();
+	   	return false;
+	 }
+	else
+	if(document.fn.pass.value=="")
+	 {
+		alert("Please Enter Password");
+		document.fn.pass.focus();
+		return false;
+	 }
+	else
+	if(document.fn.gender[0].checked==false && document.fn.gender[1].checked==false)
+	 {
+		alert("Please Enter Your Gender");
+		document.fn.gender.focus();
+		return false;
+	 }else
+ 	if(document.fn.pno.value=="")
+ 	 {
+ 		alert("Please the phone number");
+ 		document.fn.pass.focus();
+ 		return false;
+ 	 }
+	else
+	return true;
+
+ }
+
+
+
+</script>
+<link rel="stylesheet" type="text/css" href="loginsheet.css" media="screen"/>
+</head>
+<body>
+<form name=fn method=post onsubmit="return fd()">
+<div class="top_margin"><font class="text1">Sign in</font>
+<font class="cross" >X</font>
+</div>
+<input type="text" placeholder="mail@example.com" name=email class="email" id="email"/><br/>
+<input type="password" placeholder="Password" name=pass class="password"/><br/>
+<font style="font-size:20px;align:center;padding: 12px 20px;margin: 25px 260px;">Male<input type=radio name=gender value=male><br/></font>
+<font style="font-size:20px;align:center;padding: 12px 20px;margin: 25px 260px;">Female<input type=radio name=gender value=female></font><br/>
+<input type="text" placeholder="Phone Number" name=pno class="email" id="p_no"/><br/>
+<input type="submit" value="Sign-In" class="sign-in-btn"/><br/>
+<font class="f_p">Forgot Your Password?</font> <font class="reg">Register!</font><br/><br/>
+<font class="or_text" >OR</font>
+<span class="half_page"><hr class="hr1"/>
+</span>
+<span class="half_page"><hr class="hr2"/>
+</span>
+<input type="button"  class="fb_btn"/><br/>
+<input type="button"  class="g_btn"/><br/>
+<input type="button" value="< EPAM LOGIN >" class="epam_btn"/><br/>
+</form>
+</body>
+</html>
